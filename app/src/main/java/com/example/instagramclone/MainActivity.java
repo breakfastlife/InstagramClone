@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.instagramclone.fragments.ComposeFragment;
 import com.example.instagramclone.fragments.PostsFragment;
+import com.example.instagramclone.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
@@ -64,16 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.action_home:
                         fragment = new PostsFragment();
-                        Toast.makeText(MainActivity.this, "Home!", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_profile:
-                        fragment = new ComposeFragment();
-                        Toast.makeText(MainActivity.this, "Profile!", Toast.LENGTH_SHORT).show();
+                        fragment = new ProfileFragment();
                         break;
                     case R.id.action_compose:
                     default:
+                        // TODO: make profile fragment
                         fragment = new ComposeFragment();
-                        Toast.makeText(MainActivity.this, "Compose!", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 fragmentManager.beginTransaction().replace(R.id.flContainer, fragment).commit();

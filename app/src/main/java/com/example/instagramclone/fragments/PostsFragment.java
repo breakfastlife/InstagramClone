@@ -31,11 +31,11 @@ import static com.example.instagramclone.fragments.ComposeFragment.TAG;
  */
 public class PostsFragment extends Fragment {
 
-    private PostsAdapter adapter;
+    protected PostsAdapter adapter;
 
     private RecyclerView rvPosts;
 
-    private List<Post> allPosts;
+    protected List<Post> allPosts;
 
     public PostsFragment() {
         // Required empty public constructor
@@ -66,9 +66,11 @@ public class PostsFragment extends Fragment {
 
 
 
-    private void queryPosts() {
+    protected void queryPosts() {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
+        query.setLimit(20);
+        query.addDescendingOrder(Post.KEY_CREATED_AT);
         query.findInBackground(new FindCallback<Post>() {
             @Override
             public void done(List<Post> posts, ParseException e) {
