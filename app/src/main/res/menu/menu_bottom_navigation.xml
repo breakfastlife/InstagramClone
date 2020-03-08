@@ -17,4 +17,9 @@
         android:icon="@android:drawable/ic_menu_compass"
         android:title="Home"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/action_SignOut"
+        android:icon="@android:drawable/btn_dialog"
+        android:title="Sign Out"
+        app:showAsAction="always" />
 </menu>

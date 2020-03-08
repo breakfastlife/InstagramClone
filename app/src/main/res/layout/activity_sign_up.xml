@@ -60,14 +60,29 @@
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnSignUp_Sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etEmail_Sign"
+        android:layout_alignStart="@+id/etEmail_Sign"
+        android:layout_alignEnd="@+id/etEmail_Sign"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="0dp"
+        android:text="Sign Up" />
+
+    <EditText
+        android:id="@+id/etEmail_Sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="15dp"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="15dp"
-        android:text="Sign Up" />
+        android:layout_marginEnd="0dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email" />
+
 </RelativeLayout>

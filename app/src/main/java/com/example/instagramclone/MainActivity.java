@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.example.instagramclone.fragments.ComposeFragment;
 import com.example.instagramclone.fragments.PostsFragment;
 import com.example.instagramclone.fragments.ProfileFragment;
+import com.example.instagramclone.fragments.SignOutFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.parse.FindCallback;
 import com.parse.GetCallback;
@@ -69,9 +70,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_profile:
                         fragment = new ProfileFragment();
                         break;
+                    case R.id.action_SignOut:
+                        fragment = new SignOutFragment();
+                        break;
                     case R.id.action_compose:
                     default:
-                        // TODO: make profile fragment
                         fragment = new ComposeFragment();
                         break;
                 }
